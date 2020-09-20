@@ -4,6 +4,8 @@ const cors = require('cors')
 const mongoose = require('mongoose')
 const url = 'mongodb://localhost/fbi'
 
+//export routes
+const fbiRoute = require('./routes/fbi_route')
 
 //init node on port
 const app = express()
@@ -15,6 +17,7 @@ app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 app.use(cors())
 
+app.use('/fbi', fbiRoute)
 
 app.get('/', (req, res)=>{
   res.send('It´s Workign')

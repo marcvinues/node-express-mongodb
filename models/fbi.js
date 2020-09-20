@@ -7,10 +7,7 @@ const fbiSchema = new moongose.Schema({
   },
   date: {
     type: Date
-  },
-  surveillance: {
-    type: Boolean
   }
 })
 
-module.exports = model.fbiSchema('fbi', fbiSchema)
+module.exports = mongoose.model('fbi', fbiSchema)
