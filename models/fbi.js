@@ -10,4 +10,4 @@ const fbiSchema = new moongose.Schema({
   }
 })
 
-module.exports = mongoose.model('fbi', fbiSchema)
+module.exports = mongoose.model('Fbi', fbiSchema)

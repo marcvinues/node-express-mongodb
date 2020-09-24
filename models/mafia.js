@@ -1,4 +1,3 @@
-const { Int32 } = require('mongodb')
 const moongose = require('mongoose')
 
 const mafiaStatusSchema = new moongose.Schema({
@@ -7,12 +6,14 @@ const mafiaStatusSchema = new moongose.Schema({
     required: true
   },
   member_status: {
-    type: Int32,
+    type: Number,
     required: true
   },
-  date: {
-    type: Date
+  fbi: {
+    required: true,
+    type: moongose.Schema.Types.ObjectId,
+    ref: 'Fbi'
   }
 })
 
-module.exports = model.fbiSchema('mafiaStatusSchema', mafiaStatusSchema)
+module.exports = model.fbiSchema('Mafia', mafiaStatusSchema)
