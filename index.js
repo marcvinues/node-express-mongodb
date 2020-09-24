@@ -6,6 +6,8 @@ const url = 'mongodb://localhost/fbi'
 
 //export routes
 const fbiRoute = require('./routes/fbi_route')
+const mafiaRoute = require('./routes/mafia_route')
+const mafia = require('./models/mafia')
 
 //init node on port
 const app = express()
@@ -18,6 +20,7 @@ app.use(bodyParser.json())
 app.use(cors())
 
 app.use('/fbi', fbiRoute)
+app.use('/fbi', mafiaRoute)
 
 app.get('/', (req, res)=>{
   res.send('It´s Workign')

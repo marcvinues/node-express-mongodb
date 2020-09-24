@@ -1,4 +1,4 @@
-const moongose = require('mongoose')
+const mongoose = require('mongoose')
 
 // Member type
 const mem_type = {
@@ -6,7 +6,7 @@ const mem_type = {
   message: '{VALUE} is not a valid member'
 }
 
-const MemberTypessSchema = new moongose.Schema({
+const MemberTypessSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
@@ -24,7 +24,7 @@ const MemberTypessSchema = new moongose.Schema({
   },
   member: {
     required: true,
-    type: moongose.Schema.Types.ObjectId,
+    type: mongoose.Schema.Types.ObjectId,
     ref: 'Members'
   }
 })

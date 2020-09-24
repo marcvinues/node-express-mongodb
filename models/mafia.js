@@ -1,15 +1,15 @@
-const moongose = require('mongoose')
+const mongoose = require('mongoose')
 
-const mafiaStatusSchema = new moongose.Schema({
+const mafiaStatusSchema = new mongoose.Schema({
   mafia_name: {
     type: String,
     required: true
   },
   fbi: {
     required: true,
-    type: moongose.Schema.Types.ObjectId,
+    type: mongoose.Schema.Types.ObjectId,
     ref: 'Fbi'
   }
 })
 
-module.exports = model.fbiSchema('Mafia', mafiaStatusSchema)
+module.exports = mongoose.model('Mafia', mafiaStatusSchema)

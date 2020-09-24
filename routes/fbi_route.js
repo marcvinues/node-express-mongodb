@@ -25,4 +25,15 @@ router.post('/', async (req, res)=> {
   }
 })
 
+
+router.get('/:id', async (req, res)=> {
+  try{
+    const fbiId = await Fbi.findById(req.params.id)
+    res.json(fbiId)
+  }
+  catch(err){
+    res.json({message: err})
+  }
+})
+
 module.exports = router

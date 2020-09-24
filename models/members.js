@@ -1,12 +1,12 @@
-const moongose = require('mongoose')
+const mongoose = require('mongoose')
 
-const MembersSchema = new moongose.Schema({
+const MembersSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
   },
   member_type:{
-    type: moongose.Schema.Types.ObjectId,
+    type: mongoose.Schema.Types.ObjectId,
     required: true,
     ref: 'Mafia'
   }
