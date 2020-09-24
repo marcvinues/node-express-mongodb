@@ -1,12 +1,8 @@
 const moongose = require('mongoose')
 
 const mafiaStatusSchema = new moongose.Schema({
-  member_type: {
+  mafia_name: {
     type: String,
-    required: true
-  },
-  member_status: {
-    type: Number,
     required: true
   },
   fbi: {

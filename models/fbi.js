@@ -6,7 +6,8 @@ const fbiSchema = new moongose.Schema({
     required: true,
   },
   date: {
-    type: Date
+    type: Date,
+    default: Date.now
   }
 })
 
