@@ -1,6 +1,6 @@
-const moongose = require('mongoose')
+const mongoose = require('mongoose')
 
-const fbiSchema = new moongose.Schema({
+const fbiSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
